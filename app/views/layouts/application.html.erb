@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Consultant</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Website Title -->
+    <title>M Venkat Ramaiah</title>
+    <!-- Bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font-Awesome -->
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Lightbox -->
+    <link href="/assets/css/lightbox.css" rel="stylesheet">
+    <!-- Text Rotator-->
+    <link href="/assets/simpletextrotator.css" rel="stylesheet">
+    <!-- FlexSlider -->
+    <link href="/assets/flexslider.css" rel="stylesheet">
+    <!-- Theme Style -->
+    <link href="/assets/style.css" rel="stylesheet">
+    <!-- Animations -->
+    <link href="/assets/animate.css" rel="stylesheet">
+    <!-- Custom Favicon -->
+    <link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/assets/html5shiv/html5shiv.js"></script>
+    <script src="/assets/respond/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body id="top">
+    <%= yield %>
+  </body>
+</html>
