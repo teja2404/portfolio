@@ -1,6 +1,9 @@
-$(window).load(function(){
-	$('#preloader').fadeOut('slow',function(){$(this).remove();});
-});
+$(document).ready(function () {
+
+
+// $(window).load(function(){
+// 	$('#preloader').fadeOut('fast',function(){$(this).remove();});
+// });
 
 
 /******************************************************************************************************************************
@@ -60,5 +63,7 @@ Menu
 	init();
 
 })();
+
+})
 
 
