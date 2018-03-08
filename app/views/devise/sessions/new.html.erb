@@ -1,0 +1,83 @@
+<!-- <h2>Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %> -->
+
+<%#= render "devise/shared/links" %>
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100 p-t-85 p-b-20">
+      <!-- <form class="login100-form validate-form"> -->
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name),html: {class:'login100-form validate-form', autocomplete: "off" }) do |f| %>
+           <input autocomplete="off" name="hidden" type="text" style="display:none;">
+        <span class="login100-form-title p-b-70">
+          Welcome
+        </span>
+        <span class="login100-form-avatar">
+          <img src="/assets/avatar-01.jpg" alt="AVATAR">
+        </span>
+
+        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+          <!-- <input class="input100" type="text" name="username"> -->
+            <%= f.email_field :email, autofocus: true, class:'input100', autocomplete:"off" %>
+          <span class="focus-input100" data-placeholder="Username"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+          <!-- <input class="input100" type="password" name="pass"> -->
+          <%= f.password_field :password, autocomplete: "off" ,class:'input100' %>
+          <span class="focus-input100" data-placeholder="Password"></span>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <!-- <button class="login100-form-btn">
+            Login
+          </button> -->
+          <%= f.submit "Log in",class:"login100-form-btn" %>
+        </div>
+
+        <ul class="login-more p-t-190">
+          <li class="m-b-8">
+            <!-- <span class="txt1">
+              Forgot
+            </span> -->
+
+            <a href="#" class="txt2">
+              <%= render "devise/shared/links" %>
+            </a>
+          </li>
+
+          <!-- <li>
+            <span class="txt1">
+              Don’t have an account?
+            </span>
+
+            <a href="#" class="txt2">
+              Sign up
+            </a>
+          </li> -->
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

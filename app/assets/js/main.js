@@ -21,7 +21,7 @@ $(function() {
 
 /******************************************************************************************************************************
 Menu
-*******************************************************************************************************************************/ 
+*******************************************************************************************************************************/
 (function() {
 
 	var bodyEl = document.body,
@@ -29,16 +29,18 @@ Menu
 		openbtn = document.getElementById( 'open-button' ),
 		closebtn = document.getElementById( 'close-button' ),
 		isOpen = false;
-
+    if (openbtn || closebtn) {
 	function init() {
 		initEvents();
 	}
 
+      // Do something
 	function initEvents() {
 		openbtn.addEventListener( 'click', toggleMenu );
 		if( closebtn ) {
 			closebtn.addEventListener( 'click', toggleMenu );
 		}
+  }
 
 		/* close the menu element if the target it´s not the menu element or one of its descendants..
 		content.addEventListener( 'click', function(ev) {
@@ -48,7 +50,7 @@ Menu
 			}
 		} );
 		*/
-	}
+	// }
 
 	function toggleMenu() {
 		if( isOpen ) {
@@ -59,11 +61,9 @@ Menu
 		}
 		isOpen = !isOpen;
 	}
-
+  // if (openbtn || closebtn) {
 	init();
-
+}
 })();
 
 })
-
-
