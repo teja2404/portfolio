@@ -13,10 +13,10 @@
             else {
                 $(this).removeClass('has-val');
             }
-        })    
+        })
     })
-  
-  
+
+
     /*==================================================================
     [ Validate ]*/
     var input = $('.validate-input .input100');
@@ -65,6 +65,26 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
-    
+
+
+    $(document).on('focusout',".input100",function() {
+     if($('#user_email').val()){
+       var span = $(this).next().get(0)
+       $(span).attr('data-placeholder','')
+     }else if ($('#user_password').val()) {
+         var span = $(this).next().get(0)
+         $(span).attr('data-placeholder','')
+
+     }
+     if($('#user_password').val() === "" ){
+       var span = $('#user_password').next().get(0)
+       $(span).attr('data-placeholder','Password')
+     }
+      if ($('#user_email').val() === "") {
+       var span = $('#user_email').next().get(0)
+       $(span).attr('data-placeholder','Username')
+     }
+    })
+
+
 })(jQuery);
